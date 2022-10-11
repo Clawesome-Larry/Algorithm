@@ -1,0 +1,18 @@
+# 7. 문자열 뒤집기
+
+input_list = list(map(int, input()))
+
+zero_count = 0 # 연속된 0을 1로 변환하는 횟수
+one_count = 0 # 연속된 1을 0으로 변환하는 횟수
+
+for i in range(0, len(input_list)-1):
+  if (input_list[i] != input_list[i+1]): # 변환은 앞뒤가 다를 때 이루어진다
+    if (input_list[i] == 0):
+      zero_count += 1
+    else:
+      one_count += 1
+
+count_list = []
+count_list.append(zero_count)
+count_list.append(one_count)
+print(min(count_list))
