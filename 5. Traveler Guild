@@ -1,0 +1,18 @@
+# 5. 모험가 길드
+# 그룹 수가 최대가 되려면 한 그룹당 명수 최소화
+
+N = int(input())
+
+A_list = list(map(int, input().split()))
+A_list.sort() # 작은 순으로 정렬
+
+group_num = 0
+people_num = 0
+
+for i in A_list:
+  people_num += 1
+  if (people_num >= i): # 사람수가 공포도보다 높으면 새로운 그룹 결성
+    group_num += 1
+    people_num = 0
+
+print(group_num)
