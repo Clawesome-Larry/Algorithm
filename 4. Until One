@@ -1,0 +1,16 @@
+# 4. 1이 될 때까지
+
+N, K = map(int, input().split())
+
+trial = 0
+
+while (N > 1):
+  if (N%K == 0): # N이 K로 나눠떨어지면 나누기
+    N = N//K
+    trial += 1
+
+  else: # 나누어 떨어지지 않으면 N = N-1
+    N -= 1
+    trial += 1
+
+print(trial)
