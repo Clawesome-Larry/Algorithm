@@ -1,0 +1,17 @@
+# 8. 만들 수 없는 금액
+
+N = int(input())
+
+coin_list = list(map(int, input().split()))
+
+Max = 0
+for i in range (0, len(coin_list)): # 만들 수 있는 최대 금액 계산
+  Max += coin_list[i]
+
+price_list = []
+for j in range(1, Max +1): # 1원 ~ 최대 금액 리스트 생성
+  price_list.append(j)
+  
+#ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+
